@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3iotj6pq8cp4"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_vkndo"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vkndo")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 127.0
+offset_top = 40.0
+offset_right = 279.0
+offset_bottom = 148.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 196.0
+offset_right = 280.0
+offset_bottom = 304.0
+text = "Quit"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

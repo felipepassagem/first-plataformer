@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3iotj6pq8cp4"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_vkndo"]
+[ext_resource type="PackedScene" uid="uid://cfojwhhurf5l6" path="res://BG.tscn" id="2_0nch8"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vkndo")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 438.0
+offset_top = 336.0
+offset_right = 704.0
+offset_bottom = 453.0
+text = "Quit"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 435.0
+offset_top = 133.0
+offset_right = 698.0
+offset_bottom = 247.0
+text = "Play"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_0nch8")]
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

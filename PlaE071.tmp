@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://vrwxrf7t8axi"]
+
+[ext_resource type="Script" path="res://Plataforma.gd" id="1_eeqig"]
+[ext_resource type="Texture2D" uid="uid://gnwmb0bijo4m" path="res://assets/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-1.png" id="2_wcem6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndnf7"]
+size = Vector2(226, 20)
+
+[node name="Plataforma" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_eeqig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(108, 0)
+shape = SubResource("RectangleShape2D_ndnf7")
+
+[node name="Opossum-1" type="Sprite2D" parent="."]
+position = Vector2(135, -2)
+scale = Vector2(8.05556, 1)
+texture = ExtResource("2_wcem6")
